@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ten10to10ju10</title>
+    <style>
+        /* 全体のフォントとリセット */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #3e62ad;
+            --text-color: #e1e3e6;
+            --background-color: #44484e;
+            --accent-color: #8f949c; 
+            --light-color: #d6d9dd;
+            --dark-accent: #5a5f66;
+        }
+        
+        body {
+            font-family: 'BIZ UDMincho', 'Noto Sans JP', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        /* ヘッダー */
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 60px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            border-bottom: 3px solid var(--dark-accent);
+        }
+        
+        header h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            color: var(--light-color);
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        header p::before, 
+        header p::after {
+            content: "";
+            padding: 0 10px;
+        }
+
+        /* メインコンテンツ */
+        main {
+            padding: 40px 20px 60px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* イントロダクション */
+        .intro {
+            background-color: var(--dark-accent);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        
+        .intro p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: var(--light-color);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .intro p::before,
+        .intro p::after {
+            content: "";
+            padding: 0 10px;
+        }
+
+        /* ソーシャルリンク */
+        .social-links {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin: 0 12px;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            background-color: var(--light-color);
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-3px);
+            background-color: var(--text-color);
+        }
+
+        /* ツイート埋め込み */
+        .tweet-section {
+            padding: 60px 20px;
+            background-color: var(--dark-accent);
+            border-radius: 8px;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
+            position: relative;
+        }
+        
+        .tweet-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 8px 8px 0 0;
+        }
+
+        .tweet-section h2 {
+            font-size: 2.2rem;
+            color: var(--light-color);
+            margin-bottom: 40px;
+            text-align: center;
+            letter-spacing: 3px;
+            position: relative;
+            display: inline-block;
+            padding: 0 30px;
+            font-weight: bold;
+        }
+        
+        .tweet-section h2::before,
+        .tweet-section h2::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tweets-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            justify-items: center;
+        }
+
+        /* モバイルではデフォルトで1列 */
+        .tweet-item {
+            width: 100%;
+            max-width: 550px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* 最初のツイートが中央揃えになるための特別なクラス */
+        .tweet-item.centered {
+            grid-column: 1 / -1;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .tweet-item iframe {
+            border: none;
+            width: 100%;
+            height: 600px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            max-width: 100%;
+            display: block;
+        }
+
+        /* PC画面では2列表示 */
+        @media (min-width: 769px) {
+            .tweets-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.15);
+            border-top: 2px solid var(--dark-accent);
+            letter-spacing: 1px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>天遠十</h1>
+    <p>@ten10to10ju10</p>
+</header>
+
+<main>
+    <div class="container">
+        <section class="intro">
+            <p>cosplayer / streamer / acter / singer</p>
+            <div class="social-links">
+                <a href="https://twitter.com/ten10to10ju10" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/ten10to10ju10_cosplay/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@ten10to10ju10" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </section>
+
+        <section class="tweet-section">
+            <h2>cosplay</h2>
+            <div class="tweets-container">
+                <!-- このツイートがもし奇数の場合、最初の中央揃えになるツイート -->
+                <div class="tweet-item" id="first-tweet">
+                    <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"> <a href="https://twitter.com/hashtag/cosplay?src=hash&amp;ref_src=twsrc%5Etfw">#cosplay</a><br><br>₊˚✧ ━━━━━━━━ ✧ ₊˚<br><br>　　ときめきの肉食獣<br><br>₊˚✧ ━━━━━━━━ ✧ ₊˚<br><br>💍 𝑵𝒐.𝟏 𝑺𝑬𝑵𝑻𝑨𝑰 𝑮𝒐𝒛𝒚𝒖𝒈𝒆𝒓<br><br>💙🦁/天遠十<br><br>📷 スタジオリューレント様 <a href="https://twitter.com/studio_ruhrend?ref_src=twsrc%5Etfw">@studio_ruhrend</a> <a href="https://t.co/fwfgtNwQXD">pic.twitter.com/fwfgtNwQXD</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1919309945054331023?ref_src=twsrc%5Etfw">May 5, 2025</a></blockquote>
+                </div>
+                
+                <!-- 残りのツイート -->
+                <div class="tweet-item">
+                    <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">👑Cosplay👑<br><br>どっちつかずの まるで幻<br><br>🕷️🕸️/天遠十<br>📷 <a href="https://twitter.com/studioshizuku?ref_src=twsrc%5Etfw">@studioshizuku</a><a href="https://twitter.com/hashtag/10%E3%81%AE%E7%8E%8B%E6%A7%98?src=hash&amp;ref_src=twsrc%5Etfw">#10の王様</a><br><br>⚠️タップ推奨⚠️ <a href="https://t.co/F0zr8qSwkD">pic.twitter.com/F0zr8qSwkD</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1727975459156307980?ref_src=twsrc%5Etfw">November 24, 2023</a></blockquote>
+                </div>
+                
+                <div class="tweet-item">
+                    <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">⚠タップ推奨⚠<br><br>❖━━━━━❖<br><br>　 花に風<br><br>❖━━━━━❖<br><br>𝑅𝐼𝐷𝐸 𝐾𝐴𝑀𝐸N𝑆<br><br>宗雲/天遠十<a href="https://twitter.com/hashtag/cosplay?src=hash&amp;ref_src=twsrc%5Etfw">#cosplay</a> <a href="https://twitter.com/hashtag/dkmn_cos?src=hash&amp;ref_src=twsrc%5Etfw">#dkmn_cos</a><br># 宗雲Bday <a href="https://t.co/We0neaRNmm">pic.twitter.com/We0neaRNmm</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1896213911869001766?ref_src=twsrc%5Etfw">March 2, 2025</a></blockquote>
+                </div>
+                
+                <div class="tweet-item">
+                    <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">👑cosplay👑<br><br>✎*┈┈┈┈┈┈┈┈┈┈┈<br><br>永遠に続く物語を<br><br>君に託す<br><br>……とさ<br><br>┈┈┈┈┈┈┈┈┈┈┈✎*<br><br>🕷️🕸️/天遠十<br><br>📷(サムネ)へいさん <a href="https://twitter.com/unmatchsan?ref_src=twsrc%5Etfw">@unmatchsan</a> <br>📷(新章)ほまれさん <a href="https://twitter.com/junction8ff?ref_src=twsrc%5Etfw">@junction8ff</a> <br>📷(旧章)studio雫さん <a href="https://twitter.com/studioshizuku?ref_src=twsrc%5Etfw">@studioshizuku</a> <br><br>タップ推奨 <a href="https://t.co/LARK5al5Sa">pic.twitter.com/LARK5al5Sa</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1761570896681287923?ref_src=twsrc%5Etfw">February 25, 2024</a></blockquote>
+                </div>
+                
+                <div class="tweet-item">
+                    <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">👑cosplay👑<br><br>⚠️一部捏造注意⚠️<br><br>✎*┈┈┈┈┈┈┈┈┈┈┈<br><br>狭間<br><br>┈┈┈┈┈┈┈┈┈┈┈✎*<br><br>🕷️🕸️/天遠十<br><br>📷テリーさん <a href="https://twitter.com/Terry_hobbies?ref_src=twsrc%5Etfw">@Terry_hobbies</a> <br>📍コセット池袋本店 <a href="https://twitter.com/cosset_jp?ref_src=twsrc%5Etfw">@cosset_jp</a> <a href="https://t.co/XLDvwrpsvB">pic.twitter.com/XLDvwrpsvB</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1791732979741700575?ref_src=twsrc%5Etfw">May 18, 2024</a></blockquote>
+                </div>
+                
+                <div class="tweet-item">
+                    <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"> <a href="https://twitter.com/hashtag/cosplay?src=hash&amp;ref_src=twsrc%5Etfw">#cosplay</a> <a href="https://twitter.com/hashtag/dkmn_cos?src=hash&amp;ref_src=twsrc%5Etfw">#dkmn_cos</a><br><br>◤◢◤◢◤◢◤◢◤◢<br><br>　芸術とは<br><br>　命を削るものだ<br><br>◤◢◤◢◤◢◤◢◤◢<br><br>𝙍𝙄𝘿𝙀 𝙆𝘼𝙈𝙀N𝙎<br><br>神威為士/天遠十<br><br>📷テリー様 <a href="https://twitter.com/Terry_hobbies?ref_src=twsrc%5Etfw">@Terry_hobbies</a><br>🧳ai Ruin studio様 <a href="https://twitter.com/airuin_s?ref_src=twsrc%5Etfw">@airuin_s</a> <a href="https://t.co/iDYBINYfBY">pic.twitter.com/iDYBINYfBY</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1898275284111290588?ref_src=twsrc%5Etfw">March 8, 2025</a></blockquote>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 ten10to10ju10</p>
+</footer>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script>
+    // ページ読み込み後に実行
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const tweetsContainer = document.querySelector('.tweets-container');
+        const tweetItems = tweetsContainer.querySelectorAll('.tweet-item');
+        
+        // ツイートの数が奇数かどうかをチェック
+        if (tweetItems.length % 2 !== 0) {
+            // 奇数の場合、最初のツイートに特別なクラスを追加
+            const firstTweet = document.getElementById('first-tweet');
+            firstTweet.classList.add('centered');
+        }
+    });
+</script>
+</body>
+</html>
