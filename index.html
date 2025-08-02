@@ -234,6 +234,83 @@
             border-color: var(--primary-color);
             color: var(--primary-color);
         }
+
+        /* トグルリスト用のスタイル */
+.toggle-list {
+    margin-bottom: 30px;
+}
+
+.toggle-item {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-header {
+    padding: 20px 25px;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.toggle-header:hover {
+    background-color: #2a4d8a;
+}
+
+.toggle-header h3 {
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+.toggle-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.toggle-item.active .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.toggle-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background-color: var(--dark-accent);
+}
+
+.toggle-item.active .toggle-content {
+    max-height: 5000px;
+    transition: max-height 0.6s ease-in;
+}
+
+.toggle-inner {
+    padding: 30px 20px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .toggle-header {
+        padding: 15px 20px;
+    }
+    
+    .toggle-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .toggle-inner {
+        padding: 20px 15px;
+    }
+}
         
         footer {
             text-align: center;
@@ -281,7 +358,37 @@
 <div class="tweet-item"><blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/cosplay?src=hash&amp;ref_src=twsrc%5Etfw">#cosplay</a><br><br>₊˚✧ ━━━━━━ ✧ ₊˚<br><br>　　　 百の夜<br><br>₊˚✧ ━━━━━━ ✧ ₊˚<br><br>💍 𝑵𝒐.𝟏 𝑺𝑬𝑵𝑻𝑨𝑰 𝑮𝒐𝒛𝒚𝒖𝒈𝒆𝒓<br><br>🦁💙/天遠十<br><br>📷 かぷ様 <a href="https://twitter.com/camepuchi?ref_src=twsrc%5Etfw">@camepuchi</a> <a href="https://twitter.com/hashtag/%E3%82%B3%E3%82%BB%E3%83%83%E3%83%88%E6%B1%A0%E8%A2%8B?src=hash&amp;ref_src=twsrc%5Etfw">#コセット池袋</a> <a href="https://t.co/4KjsyOzkhX">pic.twitter.com/4KjsyOzkhX</a></p>&mdash; 十🔟 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1941453155256156637?ref_src=twsrc%5Etfw">July 5, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 <div class="tweet-item"><blockquote class="twitter-tweet"><p lang="ja" dir="ltr"> <a href="https://twitter.com/hashtag/cosplay?src=hash&amp;ref_src=twsrc%5Etfw">#cosplay</a><br><br>₊˚✧ ━━━━━━━━ ✧ ₊˚<br><br>　　ときめきの肉食獣<br><br>₊˚✧ ━━━━━━━━ ✧ ₊˚<br><br>💍 𝑵𝒐.𝟏 𝑺𝑬𝑵𝑻𝑨𝑰 𝑮𝒐𝒛𝒚𝒖𝒈𝒆𝒓<br><br>💙🦁/天遠十<br><br>📷 スタジオリューレント様 <a href="https://twitter.com/studio_ruhrend?ref_src=twsrc%5Etfw">@studio_ruhrend</a> <a href="https://t.co/fwfgtNwQXD">pic.twitter.com/fwfgtNwQXD</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1919309945054331023?ref_src=twsrc%5Etfw">May 5, 2025</a></blockquote></div>
 <div class="tweet-item"><blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/cosplay?src=hash&amp;ref_src=twsrc%5Etfw">#cosplay</a><br><br>₊˚✧ ━━━━━━━ ✧ ₊˚<br><br>　　キトゥンブルー<br><br>₊˚✧ ━━━━━━━ ✧ ₊˚<br><br>💍 𝑵𝒐.𝟏 𝑺𝑬𝑵𝑻𝑨𝑰 𝑮𝒐𝒛𝒚𝒖𝒈𝒆𝒓<br><br>💙🦁/天遠十<br><br>📷 スタジオリューレント様 <a href="https://twitter.com/studio_ruhrend?ref_src=twsrc%5Etfw">@studio_ruhrend</a> <a href="https://t.co/w4xzeqOidH">pic.twitter.com/w4xzeqOidH</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1923619783972618682?ref_src=twsrc%5Etfw">May 17, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+<div class="toggle-list">
+    <!-- Gozyuger -->
+    <div class="toggle-item">
+        <div class="toggle-header" onclick="toggleContent(this)">
+            <h3>Gozyuger</h3>
+            <i class="fas fa-chevron-down toggle-icon"></i>
+        </div>
+        <div class="toggle-content">
+            <div class="toggle-inner">
+                <div class="tweets-container">
+<div class="tweet-item"><blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/cosplay?src=hash&amp;ref_src=twsrc%5Etfw">#cosplay</a><br><br>₊˚✧ ━━━━━━━ ✧ ₊˚<br><br>　　　 輝くもの<br><br>　　　天より墜ち<br><br>₊˚✧ ━━━━━━━ ✧ ₊˚<br><br>💍 𝑵𝒐.𝟏 𝑺𝑬𝑵𝑻𝑨𝑰 𝑮𝒐𝒛𝒚𝒖𝒈𝒆𝒓<br><br>🦁💙🩶/天遠十<br><br>📷 かぷ様 <a href="https://twitter.com/camepuchi?ref_src=twsrc%5Etfw">@camepuchi</a> <a href="https://twitter.com/hashtag/%E3%82%B3%E3%82%BB%E3%83%83%E3%83%88%E6%B1%A0%E8%A2%8B?src=hash&amp;ref_src=twsrc%5Etfw">#コセット池袋</a><br><br>⚠️タップ推奨 <a href="https://t.co/C38EepUej2">pic.twitter.com/C38EepUej2</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1928828825326215655?ref_src=twsrc%5Etfw">May 31, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+<div class="tweet-item"><blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/cosplay?src=hash&amp;ref_src=twsrc%5Etfw">#cosplay</a><br><br>₊˚✧ ━━━━━━ ✧ ₊˚<br><br>　　 霧のような<br><br>₊˚✧ ━━━━━━ ✧ ₊˚<br><br>💍 𝑵𝒐.𝟏 𝑺𝑬𝑵𝑻𝑨𝑰 𝑮𝒐𝒛𝒚𝒖𝒈𝒆𝒓<br><br>🦁🩶/天遠十<br><br>📷 かぷ様 <a href="https://twitter.com/camepuchi?ref_src=twsrc%5Etfw">@camepuchi</a> <a href="https://twitter.com/hashtag/%E3%82%B3%E3%82%BB%E3%83%83%E3%83%88%E6%B1%A0%E8%A2%8B?src=hash&amp;ref_src=twsrc%5Etfw">#コセット池袋</a> <a href="https://t.co/01jswYDsez">pic.twitter.com/01jswYDsez</a></p>&mdash; 十🔟 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1944012784662196429?ref_src=twsrc%5Etfw">July 12, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+<div class="tweet-item"><blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/cosplay?src=hash&amp;ref_src=twsrc%5Etfw">#cosplay</a><br><br>₊˚✧ ━━━━━ ✧ ₊˚<br><br>　　　白夜行<br><br>₊˚✧ ━━━━━ ✧ ₊˚<br><br>💍 𝑵𝒐.𝟏 𝑺𝑬𝑵𝑻𝑨𝑰 𝑮𝒐𝒛𝒚𝒖𝒈𝒆𝒓<br><br>🦁🩶/天遠十<br><br>📷 かぷ様 <a href="https://twitter.com/camepuchi?ref_src=twsrc%5Etfw">@camepuchi</a> <a href="https://twitter.com/hashtag/%E3%82%B3%E3%82%BB%E3%83%83%E3%83%88%E6%B1%A0%E8%A2%8B?src=hash&amp;ref_src=twsrc%5Etfw">#コセット池袋</a> <a href="https://t.co/B0OPcL8O5N">pic.twitter.com/B0OPcL8O5N</a></p>&mdash; 十🔟 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1949387091194089808?ref_src=twsrc%5Etfw">July 27, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+<div class="tweet-item"><blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/cosplay?src=hash&amp;ref_src=twsrc%5Etfw">#cosplay</a><br><br>₊˚✧ ━━━━━━ ✧ ₊˚<br><br>　　　 灰色の目<br><br>₊˚✧ ━━━━━━ ✧ ₊˚<br><br>💍 𝑵𝒐.𝟏 𝑺𝑬𝑵𝑻𝑨𝑰 𝑮𝒐𝒛𝒚𝒖𝒈𝒆𝒓<br><br>🦁🩶/天遠十<br><br>📷 かぷ様 <a href="https://twitter.com/camepuchi?ref_src=twsrc%5Etfw">@camepuchi</a> <a href="https://twitter.com/hashtag/%E3%82%B3%E3%82%BB%E3%83%83%E3%83%88%E6%B1%A0%E8%A2%8B?src=hash&amp;ref_src=twsrc%5Etfw">#コセット池袋</a> <a href="https://t.co/fwS2kQp9aj">pic.twitter.com/fwS2kQp9aj</a></p>&mdash; 十🔟 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1941661466148372755?ref_src=twsrc%5Etfw">July 6, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+<div class="tweet-item"><blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/cosplay?src=hash&amp;ref_src=twsrc%5Etfw">#cosplay</a><br><br>₊˚✧ ━━━━━━ ✧ ₊˚<br><br>　　　 百の夜<br><br>₊˚✧ ━━━━━━ ✧ ₊˚<br><br>💍 𝑵𝒐.𝟏 𝑺𝑬𝑵𝑻𝑨𝑰 𝑮𝒐𝒛𝒚𝒖𝒈𝒆𝒓<br><br>🦁💙/天遠十<br><br>📷 かぷ様 <a href="https://twitter.com/camepuchi?ref_src=twsrc%5Etfw">@camepuchi</a> <a href="https://twitter.com/hashtag/%E3%82%B3%E3%82%BB%E3%83%83%E3%83%88%E6%B1%A0%E8%A2%8B?src=hash&amp;ref_src=twsrc%5Etfw">#コセット池袋</a> <a href="https://t.co/4KjsyOzkhX">pic.twitter.com/4KjsyOzkhX</a></p>&mdash; 十🔟 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1941453155256156637?ref_src=twsrc%5Etfw">July 5, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+<div class="tweet-item"><blockquote class="twitter-tweet"><p lang="ja" dir="ltr"> <a href="https://twitter.com/hashtag/cosplay?src=hash&amp;ref_src=twsrc%5Etfw">#cosplay</a><br><br>₊˚✧ ━━━━━━━━ ✧ ₊˚<br><br>　　ときめきの肉食獣<br><br>₊˚✧ ━━━━━━━━ ✧ ₊˚<br><br>💍 𝑵𝒐.𝟏 𝑺𝑬𝑵𝑻𝑨𝑰 𝑮𝒐𝒛𝒚𝒖𝒈𝒆𝒓<br><br>💙🦁/天遠十<br><br>📷 スタジオリューレント様 <a href="https://twitter.com/studio_ruhrend?ref_src=twsrc%5Etfw">@studio_ruhrend</a> <a href="https://t.co/fwfgtNwQXD">pic.twitter.com/fwfgtNwQXD</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1919309945054331023?ref_src=twsrc%5Etfw">May 5, 2025</a></blockquote></div>
+<div class="tweet-item"><blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/cosplay?src=hash&amp;ref_src=twsrc%5Etfw">#cosplay</a><br><br>₊˚✧ ━━━━━━━ ✧ ₊˚<br><br>　　キトゥンブルー<br><br>₊˚✧ ━━━━━━━ ✧ ₊˚<br><br>💍 𝑵𝒐.𝟏 𝑺𝑬𝑵𝑻𝑨𝑰 𝑮𝒐𝒛𝒚𝒖𝒈𝒆𝒓<br><br>💙🦁/天遠十<br><br>📷 スタジオリューレント様 <a href="https://twitter.com/studio_ruhrend?ref_src=twsrc%5Etfw">@studio_ruhrend</a> <a href="https://t.co/w4xzeqOidH">pic.twitter.com/w4xzeqOidH</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1923619783972618682?ref_src=twsrc%5Etfw">May 17, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- KIng-Ohger -->
+    <div class="toggle-item">
+        <div class="toggle-header" onclick="toggleContent(this)">
+            <h3>KIng-Ohger</h3>
+            <i class="fas fa-chevron-down toggle-icon"></i>
+        </div>
+        <div class="toggle-content">
+            <div class="toggle-inner">
+                <div class="tweets-container">
 <div class="tweet-item"><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">👑cosplay👑<br><br>✎*┈┈┈┈┈┈┈┈┈┈┈<br><br>永遠に続く物語を<br><br>君に託す<br><br>……とさ<br><br>┈┈┈┈┈┈┈┈┈┈┈✎*<br><br>🕷️🕸️/天遠十<br><br>📷(サムネ)へいさん <a href="https://twitter.com/unmatchsan?ref_src=twsrc%5Etfw">@unmatchsan</a> <br>📷(新章)ほまれさん <a href="https://twitter.com/junction8ff?ref_src=twsrc%5Etfw">@junction8ff</a> <br>📷(旧章)studio雫さん <a href="https://twitter.com/studioshizuku?ref_src=twsrc%5Etfw">@studioshizuku</a> <br><br>タップ推奨 <a href="https://t.co/LARK5al5Sa">pic.twitter.com/LARK5al5Sa</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1761570896681287923?ref_src=twsrc%5Etfw">February 25, 2024</a></blockquote></div>
 <div class="tweet-item"><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">👑Cosplay👑<br><br>墓標<br><br>🕷️🕸️/天遠十<br>📷 <a href="https://twitter.com/studioshizuku?ref_src=twsrc%5Etfw">@studioshizuku</a><a href="https://twitter.com/hashtag/10%E3%81%AE%E7%8E%8B%E6%A7%98?src=hash&amp;ref_src=twsrc%5Etfw">#10の王様</a> <a href="https://t.co/4tqLtTw79l">pic.twitter.com/4tqLtTw79l</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1728337821432525176?ref_src=twsrc%5Etfw">November 25, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 <div class="tweet-item"><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">👑cosplay👑<br><br>✎*┈┈┈┈┈┈┈┈┈┈┈<br><br>最後の物語<br><br>┈┈┈┈┈┈┈┈┈┈┈✎*<br><br>🕷️🕸️/天遠十<br><br>📷いちろぅさん<a href="https://twitter.com/butazala?ref_src=twsrc%5Etfw">@butazala</a> <a href="https://twitter.com/hashtag/%E3%82%B3%E3%82%B9%E3%83%97%E3%83%A9%E3%83%AD%E3%83%83%E3%82%AF%E3%83%8F%E3%83%BC%E3%83%88%E5%9F%8E?src=hash&amp;ref_src=twsrc%5Etfw">#コスプラロックハート城</a> <a href="https://t.co/alzIiQzmSe">pic.twitter.com/alzIiQzmSe</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1766018588278940131?ref_src=twsrc%5Etfw">March 8, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
@@ -289,7 +396,13 @@
 <div class="tweet-item"><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">👑Cosplay👑<br><br>エピローグを書き直そう<br><br>🕷️🕸️ 天遠十<br>📷 へいさん <a href="https://twitter.com/unmatchsan?ref_src=twsrc%5Etfw">@unmatchsan</a> <a href="https://twitter.com/hashtag/%E3%82%B3%E3%82%B9%E3%83%97%E3%83%A9?src=hash&amp;ref_src=twsrc%5Etfw">#コスプラ</a>　<a href="https://twitter.com/hashtag/%E3%82%B3%E3%82%B9%E3%83%97%E3%83%A9%E3%83%AD%E3%83%83%E3%82%AF%E3%83%8F%E3%83%BC%E3%83%88%E5%9F%8E?src=hash&amp;ref_src=twsrc%5Etfw">#コスプラロックハート城</a><a href="https://twitter.com/hashtag/%E7%8E%8B%E5%9B%BD%E5%90%8C%E7%9B%9F%E4%BC%9A%E8%AD%B0?src=hash&amp;ref_src=twsrc%5Etfw">#王国同盟会議</a> <a href="https://t.co/vlqwRWzmr5">pic.twitter.com/vlqwRWzmr5</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1753342525811867915?ref_src=twsrc%5Etfw">February 2, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 <div class="tweet-item"><blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E6%96%B0%E3%81%97%E3%81%84%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E7%94%BB%E5%83%8F?src=hash&amp;ref_src=twsrc%5Etfw">#新しいプロフィール画像</a><br><br>👑cosplay👑<br>🕷️🕸️/天遠十<br><br>📷テリーさん <a href="https://twitter.com/Terry_hobbies?ref_src=twsrc%5Etfw">@Terry_hobbies</a> <br>📍コセット池袋本店 <a href="https://twitter.com/cosset_jp?ref_src=twsrc%5Etfw">@cosset_jp</a> <br><br>リプにヘッダー別バージョン <a href="https://t.co/nBA6kRFBN5">pic.twitter.com/nBA6kRFBN5</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1791393245265879067?ref_src=twsrc%5Etfw">May 17, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 <div class="tweet-item"><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">👑 <a href="https://twitter.com/hashtag/cosplay?src=hash&amp;ref_src=twsrc%5Etfw">#cosplay</a> 👑<br><br>蜘蛛の糸ってのは<br>古来より地獄に繋がってるのさ<br><br>🕷️🕸️/天遠十<br>📷 <a href="https://twitter.com/studioshizuku?ref_src=twsrc%5Etfw">@studioshizuku</a><a href="https://twitter.com/hashtag/10%E3%81%AE%E7%8E%8B%E6%A7%98?src=hash&amp;ref_src=twsrc%5Etfw">#10の王様</a> <a href="https://t.co/aZ9srJe00Z">pic.twitter.com/aZ9srJe00Z</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1733048842818662617?ref_src=twsrc%5Etfw">December 8, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- 他のカテゴリも同様に追加 -->
+</div>
 <div class="tweet-item"><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">⚠️タップ推奨⚠️<a href="https://twitter.com/hashtag/cosplay?src=hash&amp;ref_src=twsrc%5Etfw">#cosplay</a> <a href="https://twitter.com/hashtag/dkmn_cos?src=hash&amp;ref_src=twsrc%5Etfw">#dkmn_cos</a><br><br>◤◢◤◢◤◢◤◢◤◢<br><br>「変身！」<br><br>◤◢◤◢◤◢◤◢◤◢<br><br>𝙍𝙄𝘿𝙀 𝙆𝘼𝙈𝙀𝙉𝙎<br>𝙃𝙖𝙡𝙛 𝙔𝙚𝙖𝙧 𝘼𝙣𝙣𝙞𝙫𝙚𝙧𝙨𝙖𝙧𝙮<br><br># ライドカメンズ<br># カメンズ <a href="https://t.co/my3roEkGm1">pic.twitter.com/my3roEkGm1</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1862513171627704595?ref_src=twsrc%5Etfw">November 29, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 <div class="tweet-item"><blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/cosplay?src=hash&amp;ref_src=twsrc%5Etfw">#cosplay</a> <a href="https://twitter.com/hashtag/dkmn_cos?src=hash&amp;ref_src=twsrc%5Etfw">#dkmn_cos</a><br><br>◤◢◤◢◤◢◤◢◤◢◤◢<br><br>ただ、守るべきものを守り、<br><br>戦うべきものと戦う<br><br>◤◢◤◢◤◢◤◢◤◢◤◢<br><br>𝙍𝙄𝘿𝙀 𝙆𝘼𝙈𝙀𝙉𝙎<br><br>魅上才悟/天遠十<br><br>📷七代鱗様 <a href="https://twitter.com/hikosu_Kcos?ref_src=twsrc%5Etfw">@hikosu_Kcos</a><a href="https://twitter.com/hashtag/%E3%82%A2%E3%82%B3%E3%82%B9%E3%82%BF%E6%B1%A0%E8%A2%8B?src=hash&amp;ref_src=twsrc%5Etfw">#アコスタ池袋</a> <a href="https://t.co/QLlPfQvl87">pic.twitter.com/QLlPfQvl87</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1844649386694922495?ref_src=twsrc%5Etfw">October 11, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 <div class="tweet-item"><blockquote class="twitter-tweet"><p lang="ja" dir="ltr"> <a href="https://twitter.com/hashtag/cosplay?src=hash&amp;ref_src=twsrc%5Etfw">#cosplay</a> <a href="https://twitter.com/hashtag/dkmn_cos?src=hash&amp;ref_src=twsrc%5Etfw">#dkmn_cos</a><br><br>◤◢◤◢◤◢◤◢◤◢<br><br>　芸術とは<br><br>　命を削るものだ<br><br>◤◢◤◢◤◢◤◢◤◢<br><br>𝙍𝙄𝘿𝙀 𝙆𝘼𝙈𝙀N𝙎<br><br>神威為士/天遠十<br><br>📷テリー様 <a href="https://twitter.com/Terry_hobbies?ref_src=twsrc%5Etfw">@Terry_hobbies</a><br>🧳ai Ruin studio様 <a href="https://twitter.com/airuin_s?ref_src=twsrc%5Etfw">@airuin_s</a> <a href="https://t.co/iDYBINYfBY">pic.twitter.com/iDYBINYfBY</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1898275284111290588?ref_src=twsrc%5Etfw">March 8, 2025</a></blockquote></div>
@@ -333,5 +446,27 @@
         }
     });
 </script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const tweetsContainer = document.querySelector('.tweets-container');
+        const tweetItems = tweetsContainer.querySelectorAll('.tweet-item');
+
+        if (tweetItems.length % 2 !== 0) {
+            const firstTweet = document.getElementById('first-tweet');
+            if (firstTweet) {
+                firstTweet.classList.add('centered');
+            }
+        }
+    });
+</script>
+
+<script>
+function toggleContent(header) {
+    const toggleItem = header.parentElement;
+    const isActive = toggleItem.classList.contains('active');
+    
+    // 他のトグルを閉じる（オプション）
+    document.querySelectorAll('.toggle-item.active').forEach(item => {
 </body>
 </html>
