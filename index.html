@@ -225,6 +225,94 @@
             border-top: 2px solid var(--dark-accent);
             letter-spacing: 1px;
         }
+    .toggle-section {
+            margin-bottom: 40px;
+        }
+
+        .toggle-item {
+            background-color: var(--dark-accent);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-header {
+            padding: 20px 30px;
+            background-color: var(--primary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+            border: none;
+            width: 100%;
+            color: var(--light-color);
+            font-family: inherit;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .toggle-header:hover {
+            background-color: #2a4a85;
+        }
+
+        .toggle-header.active {
+            background-color: #2a4a85;
+        }
+
+        .toggle-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-header.active .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .toggle-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+            padding: 0 30px;
+        }
+
+        .toggle-content.active {
+            max-height: 2000px;
+            padding: 30px;
+        }
+
+        .toggle-posts-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            justify-items: center;
+        }
+
+        @media (min-width: 769px) {
+            .toggle-posts-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .toggle-post-item {
+            width: 100%;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .toggle-post-item iframe {
+            border: none;
+            width: 100%;
+            height: 600px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            max-width: 100%;
+            display: block;
+        }
+
     </style>
 </head>
 <body>
@@ -283,11 +371,28 @@
 <div class="tweet-item"><blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/cosplay?src=hash&amp;ref_src=twsrc%5Etfw">#cosplay</a><br><br>◢◤グリッドマン ユニバース◢◤<br><br>════════════<br><br>約束と<br>愛と<br>&quot;　　　　&quot;<br><br>════════════<br><br>レックス 天遠十<br>📷COZYさん @cozyraman <a href="https://twitter.com/hashtag/%E3%82%B3%E3%82%B8%E3%83%A9%E3%83%9E%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9?src=hash&amp;ref_src=twsrc%5Etfw">#コジラマンサービス</a><a href="https://twitter.com/hashtag/%E3%82%88%E3%81%A4%E3%82%84%E3%81%B9%E3%83%BC%E3%81%99?src=hash&amp;ref_src=twsrc%5Etfw">#よつやべーす</a> <a href="https://t.co/Wmc2R157Ev">pic.twitter.com/Wmc2R157Ev</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1761375507617378538?ref_src=twsrc%5Etfw">February 24, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 <div class="tweet-item"><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">||◤　　　　　　　 　　　　　◥||<br><br>　 真夜中だって照らしてやるよ<br><br>||◣　　　　　　　 　　　　　◢||<br><br>真夜中ぱんチ<br><br>真咲/天遠十<br><br>📷🧳 スタジオクラリス様 <a href="https://twitter.com/studio_claris?ref_src=twsrc%5Etfw">@studio_claris</a><a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA%E3%82%AF%E3%83%A9%E3%83%AA%E3%82%B9?src=hash&amp;ref_src=twsrc%5Etfw">#スタジオクラリス</a> <a href="https://t.co/fgNw3vpqhg">pic.twitter.com/fgNw3vpqhg</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1875419245401796759?ref_src=twsrc%5Etfw">January 4, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 <div class="tweet-item"> <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">❖━━━━━━━━❖<br><br>　　王女への謁見<br><br>❖━━━━━━━━❖<br><br>𝑅𝐼𝐷𝐸 𝐾𝐴𝑀𝐸𝑁𝑆<br><br>トゥルーエンド・ウィズ・アス<br><br>宗雲🍈十 <a href="https://twitter.com/ten10to10ju10?ref_src=twsrc%5Etfw">@ten10to10ju10</a><br>皇紀🐍肖腦朱夏様 <a href="https://twitter.com/SYUKA0729cos?ref_src=twsrc%5Etfw">@SYUKA0729cos</a><br>浄🦇天武様 <a href="https://twitter.com/28tenmu?ref_src=twsrc%5Etfw">@28tenmu</a><br>📷へい様 <a href="https://twitter.com/unmatchsan?ref_src=twsrc%5Etfw">@unmatchsan</a><a href="https://twitter.com/hashtag/%E3%82%B3%E3%82%B9%E3%83%97%E3%83%A9?src=hash&amp;ref_src=twsrc%5Etfw">#コスプラ</a> <a href="https://twitter.com/hashtag/%E3%82%B3%E3%82%B9%E3%83%97%E3%83%A9%E3%83%AD%E3%83%83%E3%82%AF%E3%83%8F%E3%83%BC%E3%83%88%E5%9F%8E?src=hash&amp;ref_src=twsrc%5Etfw">#コスプラロックハート城</a><a href="https://twitter.com/hashtag/dkmn_cos?src=hash&amp;ref_src=twsrc%5Etfw">#dkmn_cos</a> <a href="https://twitter.com/hashtag/1212%E3%82%B0%E3%83%B3%E3%83%9E%E3%82%B7%E3%83%B3%E3%82%AF%E3%82%B9?src=hash&amp;ref_src=twsrc%5Etfw">#1212グンマシンクス</a> <a href="https://t.co/bj1DXIwG2S">pic.twitter.com/bj1DXIwG2S</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1872945839406236037?ref_src=twsrc%5Etfw">December 28, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </div>
-
-
 </section>
    
 </main>
+
+<section class="toggle-section">
+            <div class="toggle-item">
+                <button class="toggle-header" onclick="toggleContent('featured-posts')">
+                    <span>注目のコスプレ投稿</span>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </button>
+                <div class="toggle-content" id="featured-posts">
+                    <div class="toggle-posts-grid">
+                        <div class="toggle-post-item">
+                            <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/cosplay?src=hash&amp;ref_src=twsrc%5Etfw">#cosplay</a><br><br>₊˚✧ ━━━━━━━ ✧ ₊˚<br><br>　　　 輝くもの<br><br>　　　天より墜ち<br><br>₊˚✧ ━━━━━━━ ✧ ₊˚<br><br>💍 𝑵𝒐.𝟏 𝑺𝑬𝑵𝑻𝑨𝑰 𝑮𝒐𝒛𝒚𝒖𝒈𝒆𝒓<br><br>🦁💙🩶/天遠十<br><br>📷 かぷ様 <a href="https://twitter.com/camepuchi?ref_src=twsrc%5Etfw">@camepuchi</a> <a href="https://twitter.com/hashtag/%E3%82%B3%E3%82%BB%E3%83%83%E3%83%88%E6%B1%A0%E8%A2%8B?src=hash&amp;ref_src=twsrc%5Etfw">#コセット池袋</a><br><br>⚠️タップ推奨 <a href="https://t.co/C38EepUej2">pic.twitter.com/C38EepUej2</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1928828825326215655?ref_src=twsrc%5Etfw">May 31, 2025</a></blockquote>
+                        </div>
+                        <div class="toggle-post-item">
+                            <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/cosplay?src=hash&amp;ref_src=twsrc%5Etfw">#cosplay</a><br><br>◤◢◤◢◤◢◤◢◤ ◢◤ ◢<br><br> 世界はいつも変わっていく<br><br>◤◢◤◢◤◢◤◢◤ ◢◤ ◢<br><br>𝙂𝙪𝙣𝙙𝙖𝙢 𝙂𝙌𝙪𝙪𝙪𝙪𝙪𝙪𝙓<br><br>シュウジ・イトウ/天遠十<br><br>📷カルロス様 <a href="https://twitter.com/padawan_c?ref_src=twsrc%5Etfw">@padawan_c</a> <br>📍四谷BASE様 <a href="https://twitter.com/hashtag/%E3%82%88%E3%81%A4%E3%82%84%E3%81%B9%E3%83%BC%E3%81%99?src=hash&amp;ref_src=twsrc%5Etfw">#よつやべーす</a> <a href="https://t.co/j4TLXN7Cco">pic.twitter.com/j4TLXN7Cco</a></p>&mdash; 十💍👆💙🦁 (@ten10to10ju10) <a href="https://twitter.com/ten10to10ju10/status/1935344048371597453?ref_src=twsrc%5Etfw">June 18, 2025</a></blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
 
 <footer>
     <p>© 2025 ten10to10ju10</p>
