@@ -343,8 +343,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            -webkit-text-size-adjust: 100%;
-            text-size-adjust: 100%;
         }
 
         :root {
@@ -361,19 +359,14 @@
             background-color: var(--background-color);
             color: var(--text-color);
             line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
         header {
             background-color: var(--primary-color);
             color: var(--light-color);
-            padding: 60px 0;
+            padding: 60px 20px;
             text-align: center;
             margin-bottom: 60px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
             border-bottom: 3px solid var(--dark-accent);
         }
 
@@ -382,26 +375,21 @@
             margin-bottom: 10px;
             font-weight: bold;
             letter-spacing: 5px;
-            text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
         }
 
         header p {
             font-size: 1.2rem;
-            color: var(--light-color);
             letter-spacing: 2px;
-            position: relative;
-            display: inline-block;
         }
 
         main {
-            padding: 40px 20px 60px;
+            padding: 0 20px 60px;
             display: flex;
             justify-content: center;
         }
 
         .container {
             max-width: 960px;
-            margin: 0 auto;
             width: 100%;
         }
 
@@ -409,44 +397,48 @@
             background-color: var(--dark-accent);
             padding: 40px;
             border-radius: 8px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
             margin-bottom: 60px;
             text-align: center;
         }
 
         .social-links {
-            text-align: center;
-            margin-bottom: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 12px;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
         }
 
         .social-links a {
-            display: inline-flex;
+            display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            transition: transform 0.3s ease, background-color 0.3s ease;
             background-color: var(--light-color);
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            color: var(--primary-color);
-            font-size: 1.5rem;
-        }
-
-        /* SVGのアイコンサイズと色を他のSNSと揃える */
-        .social-links a svg {
-            width: 26px;
-            height: 26px;
-            fill: var(--primary-color);
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
         .social-links a:hover {
             transform: translateY(-3px);
             background-color: var(--text-color);
+        }
+
+        /* FontAwesomeアイコンの色 */
+        .social-links a i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        /* noteアイコン(SVG)のスタイル調整 */
+        .social-links a svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--primary-color);
+            display: block;
         }
 
         .tweet-section {
@@ -455,8 +447,6 @@
             border-radius: 8px;
             margin-bottom: 40px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
-            position: relative;
         }
 
         .tweet-section h2 {
@@ -464,19 +454,12 @@
             color: var(--light-color);
             margin-bottom: 40px;
             letter-spacing: 3px;
-            font-weight: bold;
         }
 
         .tweets-container {
             display: grid;
             grid-template-columns: 1fr;
             gap: 30px;
-            justify-items: center;
-        }
-
-        .tweet-item {
-            width: 100%;
-            max-width: 550px;
         }
 
         @media (min-width: 769px) {
@@ -485,7 +468,12 @@
             }
         }
 
-        /* トグル関連のスタイル */
+        .tweet-item iframe {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* トグルスタイル */
         .toggle-item {
             background-color: var(--background-color);
             border-radius: 8px;
@@ -493,28 +481,33 @@
             overflow: hidden;
         }
         .toggle-header {
-            padding: 20px 25px;
+            padding: 20px;
             background-color: var(--primary-color);
             color: var(--light-color);
             cursor: pointer;
             display: flex;
             justify-content: space-between;
-            align-items: center;
         }
         .toggle-content {
             display: none;
+            padding: 20px;
             background-color: var(--dark-accent);
         }
         .toggle-item.active .toggle-content {
             display: block;
         }
-        .toggle-inner { padding: 30px 20px; }
 
         footer {
             text-align: center;
-            padding: 25px;
+            padding: 40px;
             background-color: var(--primary-color);
             color: var(--light-color);
+        }
+
+        /* スマホ対応の調整 */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.5rem; }
+            .social-links a { width: 45px; height: 45px; }
         }
     </style>
 </head>
@@ -530,18 +523,32 @@
         <section class="intro">
             <p>SNS</p>
             <div class="social-links">
-                <a href="https://twitter.com/ten10to10ju10" rel="noopener noreferrer" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://www.instagram.com/ten10to10ju10/" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@ten10to10ju10" rel="noopener noreferrer" target="_blank"><i class="fab fa-tiktok"></i></a>
-                <a href="https://note.com/あなたのID" rel="noopener noreferrer" target="_blank">
-                    <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M32.6,20.2c0,5.4-3.5,10.2-8.6,12L21,33.2c-0.6,0.2-1.3,0.2-1.9,0l-3-1.1c-5.1-1.8-8.6-6.6-8.6-12V8.9c0-0.8,0.5-1.5,1.2-1.8l10.5-3.8c0.5-0.2,1-0.2,1.5,0l10.5,3.8c0.7,0.3,1.2,1,1.2,1.8V20.2z M25.8,12.7c0-0.5-0.3-0.9-0.8-1.1c-0.5-0.2-1-0.1-1.3,0.3l-7.9,9.4l-3.2-2.7c-0.4-0.3-0.9-0.3-1.3,0c-0.4,0.3-0.5,0.8-0.3,1.2l4.1,6.5c0.2,0.3,0.5,0.5,0.9,0.5c0.4,0,0.7-0.2,0.9-0.5l8.6-12.8C25.7,13.2,25.8,12.9,25.8,12.7z"/>
+                <a href="https://twitter.com/ten10to10ju10" rel="noopener noreferrer" target="_blank" title="X(Twitter)">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/ten10to10ju10/" rel="noopener noreferrer" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@ten10to10ju10" rel="noopener noreferrer" target="_blank" title="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://note.com/あなたのID" rel="noopener noreferrer" target="_blank" title="note">
+                    <svg viewBox="0 0 40 40">
+                        <path d="M20,2C10.1,2,2,10.1,2,20s8.1,18,18,18s18-8.1,18-18S29.9,2,20,2z M26.2,15l-8.5,12.2c-0.2,0.3-0.5,0.4-0.8,0.4c-0.3,0-0.6-0.1-0.8-0.3l-3.8-3.4c-0.4-0.4-0.5-1-0.1-1.4c0.4-0.4,1-0.5,1.4-0.1l3,2.7l7.7-11.1c0.3-0.5,1-0.6,1.4-0.3C26.3,13.9,26.5,14.6,26.2,15z"/>
                     </svg>
                 </a>
             </div>
         </section>
 
-        </div>
+        <section class="tweet-section">
+            <h2>portfolio</h2>
+            <div class="tweets-container">
+                <div class="tweet-item">
+                    <p style="color:var(--accent-color)">ここにツイートのタグを貼り付けます</p>
+                </div>
+            </div>
+        </section>
+    </div>
 </main>
 
 <footer>
